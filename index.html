@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+<head>
     <title>Google</title>
     <meta charset="UTF-8">
     <meta name="description" content="Demo static website">
@@ -10,11 +10,8 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="icon" href="https://assets.stickpng.com/images/5847f9cbcef1014c0b5e48c8.png" type="image/png" sizes="16x16">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
     <style>
-    @media only screen and (max-width: 600px) {
+        @media only screen and (max-width: 600px) {
   #logo {
     animation-name: example;
     animation-duration: 1s;
@@ -60,23 +57,23 @@
         font-size:2em;
     }
     .fa-google:hover{
-        font-size:3em;
+        
         color:red;
     }
     .fa-google-wallet:hover{
-        font-size:3em;
+        
         color:red;
     }
     .fa-google-plus-g:hover{
-        font-size:3em;
+        
         color:red;
     }
     .fa-google-play:hover{
-        font-size:3em;
+        
         color:red;
     }
     .fa-google-drive:hover{
-        font-size:3em;
+        
         color:red;
     }
     #i {
@@ -106,8 +103,8 @@
       text-indent:20px;
     }
     </style>
-    </head>
-    <body>
+</head>
+<body>
     <ul class="nav nav-pills justify-content-end">
         <li class="nav-item">
           <a class="nav-link" data-toggle="pill" href="#">Gmail</a>
@@ -142,19 +139,33 @@
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-toggle="popover" href="#"><img src="https://lh3.google.com/u/0/ogw/ADGmqu8fyrVfN8iKy1i-845v2qb31OQCead_PwZwo0H9=s32-c-mo" class="user-icon"></a>
-        </li>
-      </ul>
-      <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" class="img-fluid rounded mx-auto d-block" id="logo" alt="Google">
-      <center>
-      <div class="col-sm-5">
-      <input class="form-control" id="ex3" type="text">
-      </div>
-      </center>
-      <script>
-        $(document).ready(function(){
-          $('[data-toggle="popover"]').popover({title: "&nbspGoogle Account",html: true, content: "<img src='https://lh3.google.com/u/0/ogw/ADGmqu8fyrVfN8iKy1i-845v2qb31OQCead_PwZwo0H9=s32-c-mo' id='userinfo'><br><em>rp0258@srmist.edu.in</em><br><p><b>Rishi Pratap<b></p>", placement: "bottom", trigger: "focus"});   
+            <a class="nav-link" data-toggle="popover" href="#"><img src="https://lh3.google.com/u/0/ogw/ADGmqu8fyrVfN8iKy1i-845v2qb31OQCead_PwZwo0H9=s32-c-mo" class="user-icon"></a>
+          </li>
+        </ul>
+<img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" class="img-fluid rounded mx-auto d-block" id="logo" alt="Google">
+<center>
+    <div class="col-sm-5">
+        <input class="form-control" id="searchInput" type="text" placeholder="Enter your search query">
+        <button class="btn btn-primary mt-3" id="searchButton">Search</button>
+    </div>
+</center>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('[data-toggle="popover"]').popover({title: "&nbspGoogle Account", html: true, content: "<img src='https://lh3.google.com/u/0/ogw/ADGmqu8fyrVfN8iKy1i-845v2qb31OQCead_PwZwo0H9=s32-c-mo' id='userinfo'><br><em>rp0258@srmist.edu.in</em><br><p><b>Rishi Pratap</b></p>", placement: "bottom", trigger: "focus"});
+        
+        // Handle search button click event
+        $('#searchButton').on('click', function() {
+            var query = $('#searchInput').val();
+            if (query) {
+                // Perform search and display results
+                window.location.href = 'https://www.google.com/search?q=' + encodeURIComponent(query);
+            }
         });
-        </script>
-    </body>
+    });
+</script>
+</body>
 </html>
